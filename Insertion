@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int A[50],i,pos,val,n;
+    printf("enter the value");
+    scanf("%d",&n);
+    printf("enter the elements of array");
+    for(i=0; i<n; i++)
+       scanf("%d",&A[i]);
+    printf("enter the position and value");
+    scanf("%d%d",&pos,&val);
+    for(i=n; i>pos; i--)
+        A[i]=A[i-1];
+        A[pos]=val;
+    printf("the output is\n");
+    for(i=0; i<=n; i++)
+    {
+        printf("%d\t",A[i]);
+    }
+    return 0;
+}
